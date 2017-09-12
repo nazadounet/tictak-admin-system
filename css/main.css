@@ -1,0 +1,51 @@
+/***************************** GENERAL RULES ******************************************/
+.flexDisplayed{
+    display: flex;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.item-center{
+    align-items: center;
+}
+
+/**/
+.bg-black{
+    background: black;
+}
+
+.bg-red{
+    background: red;
+}
+
+.bg-yellow{
+    background: yellow;
+}
+
+.bg-green{
+    background: green;
+}
+
+.AdminSystemContainer{
+    margin-top: 70px;
+}
+/***************************** GENERAL RULS ******************************************/
+
+div.md-toolbar-tools md-truncate{
+    height:100%;
+    vertical-align: center;
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
