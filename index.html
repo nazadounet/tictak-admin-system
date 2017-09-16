@@ -11,10 +11,6 @@
 
     <title>Admin-TicTak</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- CSS -->
-
     <!--Angular config -->
     <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
     <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
@@ -33,11 +29,17 @@
 
     <script type="text/javascript" src="js/app.js"></script>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- CSS -->
+
     <!-- controller declaration -->
     <script type="text/javascript" src="/js/controllers/Nav-bar-topCtrl.js"></script>
+    <script type="text/javascript" src="/js/controllers/DriverSectionCtrl.js"></script>
     <!-- controller declaration -->
 
     <!-- services declaration -->
+    <script type="text/javascript" src="/js/services/GetDataFromApiFactory.js"></script>
     <!-- services declaration -->
 
 </head>
@@ -45,13 +47,14 @@
 
 <header>
 
-    <md-content>
-        <md-toolbar class="md-hue-2" style="position: fixed; background:#3f1e64; min-height: 40px; max-height: 60px">
+    <md-content ng-controller="NavBarTopCtrl">
+        <md-toolbar class="md-hue-2" style="position: fixed; background:#3f1e64; min-height: 60px; max-height: 60px">
             <div class="md-toolbar-tools">
 
-                <md-truncate class="flex-row item-center justify-center">Tik Tac Admin</md-truncate>
+                <md-truncate class="tiktacAdmin flex-row item-center justify-center">Tik Tac Admin</md-truncate>
 
                 <md-nav-bar
+                        flex
                         md-no-ink-bar="disableInkBar"
                         md-selected-nav-item="currentNavItem"
                         nav-bar-aria-label="navigation links">
@@ -59,11 +62,11 @@
                     <!-- these require actual routing with ui-router or ng-route, so they
                     won't work in the demo
                     -->
-                    <md-nav-item md-nav-href="#!test" name="test">
+                    <md-nav-item md-nav-href="#!test" name="drivers">
                         <span style="color: white;">Page 1</span>
                     </md-nav-item>
 
-                    <md-nav-item md-nav-href="#!test2" name="test2">
+                    <md-nav-item md-nav-href="#!test2" name="users">
                         <span style="color: white;">Page 2</span>
                     </md-nav-item>
 
@@ -72,6 +75,17 @@
                         <span style="color: white;">Page 3</span>
                     </md-nav-item>
                 </md-nav-bar>
+
+                <md-truncate>Omar SENOUCI</md-truncate>
+                <md-button class="md-fab md-mini offButton">
+                    <md-tooltip
+                            md-direction="bottom">
+                        Déconnexion
+                    </md-tooltip>
+                    <md-icon
+                            md-svg-src="img/icons/power-off.svg">
+                    </md-icon>
+                </md-button>
 
             </div>
         </md-toolbar>

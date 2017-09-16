@@ -1,0 +1,21 @@
+<div class="AdminSystemContainer flex-column item-center justify-center" ng-controller="DriverSectionCtrl">
+
+
+    <div class="flex-column item-center justify-center">
+
+        <h3 for="driver">Rechercher chauffeurs : email ou ID</h3>
+
+        <form class="flex-row item-center justify-center" ng-submit="getDriverProfil()">
+            <input required id="driver" ng-model="search.driverIdOrMail">
+            <md-icon
+                    ng-click="getDriverProfil()"
+                    style="background: grey;"
+                    md-svg-src="img/icons/search-icon.svg">
+            </md-icon>
+        </form>
+    </div>
+
+    <div ng-show="searchDriverLoader">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+</div>

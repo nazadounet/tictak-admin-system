@@ -5,13 +5,10 @@ app.constant('_', window._);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'partials/home.html'
+            templateUrl: 'partials/driverSection.html'
         })
-        .when('/test', {
-            templateUrl: 'partials/page1Test.html'
-        })
-        .when('/test2', {
-            templateUrl: 'partials/page2Test.html'
+        .when('/users', {
+            templateUrl: 'partials/userSection.html'
         })
         .when('/test3', {
             templateUrl: 'partials/page3Test.html'

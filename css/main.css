@@ -43,9 +43,13 @@
 }
 /***************************** GENERAL RULS ******************************************/
 
-div.md-toolbar-tools md-truncate{
+
+/***************************** INDEX RULS ******************************************/
+div.md-toolbar-tools md-truncate.tiktacAdmin{
     height:100%;
     vertical-align: center;
     border-right: 1px solid white;
     padding-right: 10px;
 }
+
+/***************************** INDEX RULS ******************************************/
